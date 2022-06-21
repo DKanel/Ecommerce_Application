@@ -6,5 +6,5 @@ data class Product(
     val productId : Int,
     val productName: String,
     val productDescription: String,
-    val productImage: Image
+//    val productImage: Image this is going to be a URL
 )

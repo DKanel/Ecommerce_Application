@@ -12,26 +12,26 @@ import com.google.android.material.textfield.TextInputEditText
 
 class AuthenticationActivity : AppCompatActivity() {
 
-    val viewModel = AuthenticationViewModel()
-
-    var emailResult = ""
-    var passwordResult = ""
-
-    var emailTextInput = findViewById<TextInputEditText>(R.id.textInput_Email)
-    var passwordPasswordTextInput = findViewById<TextInputEditText>(R.id.textInput_Password)
-
-    var loginButton = findViewById<AppCompatButton>(R.id.button_Login)
-    var registerbutton = findViewById<AppCompatButton>(R.id.button_Register)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authentication)
+
+        val viewModel = AuthenticationViewModel()
+
+        var emailResult = ""
+        var passwordResult = ""
+
+        var emailTextInput = findViewById<TextInputEditText>(R.id.textInput_Email)
+        var passwordPasswordTextInput = findViewById<TextInputEditText>(R.id.textInput_Password)
+
+        var loginButton = findViewById<AppCompatButton>(R.id.button_Login)
+        var registerbutton = findViewById<AppCompatButton>(R.id.button_Register)
 
         loginButton.setOnClickListener{
             emailResult = viewModel.checkEmail(emailTextInput.text.toString())
             passwordResult = viewModel.checkPassword(passwordPasswordTextInput.text.toString())
             if (emailResult == "Success" && passwordResult == "Success"){
-                val myIntent = Intent(this, MainActivity::class.java)
+                val myIntent = Intent(this, HomeActivity::class.java)
                 startActivity(myIntent)
             }else{
                 Toast.makeText(applicationContext,"Incorrect Email or Password ",Toast.LENGTH_SHORT).show()

@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_authentication.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.43333333333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4192708333333333" />
         <entry key="app/src/main/res/layout/card_view.xml" value="0.43333333333333335" />
       </map>
