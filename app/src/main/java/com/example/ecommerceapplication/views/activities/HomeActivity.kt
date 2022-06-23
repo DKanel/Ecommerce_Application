@@ -1,38 +1,48 @@
 package com.example.ecommerceapplication.views.activities
 
+import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.CheckBox
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ecommerceapplication.R
+import com.example.ecommerceapplication.adapters.RecyclerViewAdapter
+import com.example.ecommerceapplication.factory.ViewModelFactory
 import com.example.ecommerceapplication.models.Product
-import com.example.ecommerceapplication.recyclerView.RecyclerViewAdapter
+import com.example.ecommerceapplication.service.retrofit.ProductRepository
+import com.example.ecommerceapplication.service.retrofit.RetrofitInterface
+import com.example.ecommerceapplication.views.fragments.RecyclerViewFragment
 import com.example.ecommerceapplication.views.viewmodels.RecyclerViewViewModel
 
 class HomeActivity : AppCompatActivity() {
-
-    private var viewManager = LinearLayoutManager(this)
-    private lateinit var viewModel: RecyclerViewViewModel
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: RecyclerViewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        setTestList()
+        val checkBox = intent.getIntExtra("checkBox",0)
 
-        recyclerView = findViewById<RecyclerView>(R.id.recyclerView_Main)
-        recyclerView.layoutManager = viewManager
-        recyclerView.adapter = adapter
-    }
 
-    private fun setTestList(){
-        val testProduct1 = Product(1,"test product","this is a test product")
-        val testList: ArrayList<Product> = ArrayList()
-        for (i in 1..10){
-            testList.add(testProduct1)
+        if (checkBox == 1){
+
+            val recyclerViewFragment = RecyclerViewFragment()
+            val fragment: Fragment? =
+
+            supportFragmentManager.findFragmentByTag(RecyclerViewFragment::class.java.simpleName)
+
+            if (fragment !is RecyclerViewFragment){
+                supportFragmentManager.beginTransaction()
+                    .add(R.id.fragment_container, recyclerViewFragment, RecyclerViewFragment::class.java.simpleName)
+                    .commit()
+            }
         }
-        adapter = RecyclerViewAdapter(testList)
+
     }
 }
