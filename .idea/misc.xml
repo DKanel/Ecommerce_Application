@@ -9,7 +9,16 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.43333333333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4192708333333333" />
         <entry key="app/src/main/res/layout/card_view.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/card_view_blog.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/card_view_shop.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/fragment_blog_recycler_view.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/fragment_blog_view_pager.xml" value="0.43355914538822304" />
+        <entry key="app/src/main/res/layout/fragment_details_blog.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/fragment_empty.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/fragment_home_blog.xml" value="0.43333333333333335" />
         <entry key="app/src/main/res/layout/fragment_recycler_view.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/fragment_screen_slider.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/fragment_shop_recycler_view.xml" value="0.43333333333333335" />
       </map>
     </option>
   </component>

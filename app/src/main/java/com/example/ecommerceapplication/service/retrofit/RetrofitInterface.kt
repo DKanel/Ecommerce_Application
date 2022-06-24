@@ -1,6 +1,6 @@
 package com.example.ecommerceapplication.service.retrofit
 
-import com.example.ecommerceapplication.models.Product
+import com.example.ecommerceapplication.shop.models.Product
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

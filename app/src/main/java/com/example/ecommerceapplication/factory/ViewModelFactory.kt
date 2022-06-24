@@ -3,7 +3,7 @@ package com.example.ecommerceapplication.factory
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.ecommerceapplication.service.retrofit.ProductRepository
-import com.example.ecommerceapplication.views.viewmodels.RecyclerViewViewModel
+import com.example.ecommerceapplication.shop.viewmodels.RecyclerViewViewModel
 import java.lang.IllegalArgumentException
 
 class ViewModelFactory constructor(private val repository: ProductRepository): ViewModelProvider.Factory{

@@ -1,25 +1,11 @@
 package com.example.ecommerceapplication.views.activities
 
-import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.CheckBox
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.ecommerceapplication.R
-import com.example.ecommerceapplication.adapters.RecyclerViewAdapter
-import com.example.ecommerceapplication.factory.ViewModelFactory
-import com.example.ecommerceapplication.models.Product
-import com.example.ecommerceapplication.service.retrofit.ProductRepository
-import com.example.ecommerceapplication.service.retrofit.RetrofitInterface
-import com.example.ecommerceapplication.views.fragments.RecyclerViewFragment
-import com.example.ecommerceapplication.views.viewmodels.RecyclerViewViewModel
+import com.example.ecommerceapplication.blog.view.fragment.BlogViewPagerFragment
+import com.example.ecommerceapplication.shop.views.fragments.ShopRecyclerViewFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -29,17 +15,32 @@ class HomeActivity : AppCompatActivity() {
 
         val checkBox = intent.getIntExtra("checkBox",0)
 
-
+        //Open shop fragment
         if (checkBox == 1){
 
-            val recyclerViewFragment = RecyclerViewFragment()
+            val recyclerViewFragment = ShopRecyclerViewFragment()
             val fragment: Fragment? =
 
-            supportFragmentManager.findFragmentByTag(RecyclerViewFragment::class.java.simpleName)
+            supportFragmentManager.findFragmentByTag(ShopRecyclerViewFragment::class.java.simpleName)
 
-            if (fragment !is RecyclerViewFragment){
+            if (fragment !is ShopRecyclerViewFragment){
                 supportFragmentManager.beginTransaction()
-                    .add(R.id.fragment_container, recyclerViewFragment, RecyclerViewFragment::class.java.simpleName)
+                    .add(R.id.fragment_container, recyclerViewFragment, ShopRecyclerViewFragment::class.java.simpleName)
+                    .commit()
+            }
+        }
+
+        //Open blog fragment
+        if (checkBox == 2){
+
+            val blogFragment = BlogViewPagerFragment()
+            val fragment: Fragment? =
+
+                supportFragmentManager.findFragmentByTag(BlogViewPagerFragment::class.java.simpleName)
+
+            if (fragment !is BlogViewPagerFragment){
+                supportFragmentManager.beginTransaction()
+                    .add(R.id.fragment_container, blogFragment, BlogViewPagerFragment::class.java.simpleName)
                     .commit()
             }
         }

@@ -1,8 +1,6 @@
-package com.example.ecommerceapplication.models
+package com.example.ecommerceapplication.shop.models
 
-import android.media.Image
 import com.google.gson.annotations.SerializedName
-import retrofit2.http.Url
 
 data class Product(
     val productId : Int,

@@ -1,7 +1,6 @@
-package com.example.ecommerceapplication.adapters
+package com.example.ecommerceapplication.shop.adapters
 
 import android.content.ContentValues.TAG
-import android.nfc.Tag
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,16 +9,16 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ecommerceapplication.R
-import com.example.ecommerceapplication.models.Product
+import com.example.ecommerceapplication.shop.models.Product
 import com.squareup.picasso.Picasso
 
-class RecyclerViewAdapter(private var productList:List<Product>): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+class ShopRecyclerViewAdapter(private var productList:List<Product>): RecyclerView.Adapter<ShopRecyclerViewAdapter.ViewHolder>() {
 
     val picasso = Picasso.get()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.card_view,parent,false)
+            .inflate(R.layout.card_view_shop,parent,false)
         return ViewHolder(view)
     }
 
