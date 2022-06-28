@@ -16,7 +16,9 @@
         <entry key="app/src/main/res/layout/fragment_details_blog.xml" value="0.43333333333333335" />
         <entry key="app/src/main/res/layout/fragment_empty.xml" value="0.43333333333333335" />
         <entry key="app/src/main/res/layout/fragment_home_blog.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.43333333333333335" />
         <entry key="app/src/main/res/layout/fragment_recycler_view.xml" value="0.43333333333333335" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.43333333333333335" />
         <entry key="app/src/main/res/layout/fragment_screen_slider.xml" value="0.43333333333333335" />
         <entry key="app/src/main/res/layout/fragment_shop_recycler_view.xml" value="0.43333333333333335" />
       </map>

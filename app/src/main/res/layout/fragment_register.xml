@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.fragments.RegisterFragment">
+
+    <TextView
+        android:id="@+id/textview_email_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="ENTER A VALID EMAIL"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputlayout_email_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textview_email_register"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinputedittext_email_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textview_password_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlayout_email_register"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="ENTER A VALID PASSWORD"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputlayout_password_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textview_password_register"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinputedittext_password_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textview_confirm_password_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlayout_password_register"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="CONFIRM PASSWORD"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputlayout_confirm_password_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textview_confirm_password_register"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinputedittext_confirm_password_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_back_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlayout_confirm_password_register"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="BACK"/>
+
+    <Button
+        android:id="@+id/button_submit_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/button_back_register"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="SUBMIT"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

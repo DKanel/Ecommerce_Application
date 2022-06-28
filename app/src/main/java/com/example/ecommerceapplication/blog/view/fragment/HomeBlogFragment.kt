@@ -16,7 +16,7 @@ class HomeBlogFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     var blogItem = BlogItem("kanel","the Great", "10/10/2010","supposed image")
     var blogItemList: List<BlogItem> = listOf(blogItem,blogItem,blogItem,blogItem,blogItem)
-    val adapter = BlogRecyclerViewAdapter(blogItemList)
+    private val adapter = BlogRecyclerViewAdapter(blogItemList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

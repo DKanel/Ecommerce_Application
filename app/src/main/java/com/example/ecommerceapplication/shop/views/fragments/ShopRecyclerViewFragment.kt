@@ -26,7 +26,7 @@ class ShopRecyclerViewFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private var retrofitService = RetrofitInterface.getInstance()
     var productList: List<Product> = listOf()
-    val adapter = ShopRecyclerViewAdapter(productList)
+    private val adapter = ShopRecyclerViewAdapter(productList)
 
 
     override fun onCreateView(
